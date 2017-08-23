@@ -4,14 +4,11 @@ import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
 import javax.swing.JLabel;
 import java.awt.Font;
-import javax.swing.SwingConstants;
-import javax.swing.JTextField;
 import java.awt.event.*;
 
+@SuppressWarnings("serial")
 public class GuessWord extends JFrame{
 	private final Font IN_OUT_FONT = new Font("Arial", Font.BOLD, 35);
 	private final String HIDE_STRING = "#";
