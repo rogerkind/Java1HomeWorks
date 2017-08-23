@@ -18,8 +18,8 @@ public class GuessWord extends JFrame{
 	private final int SIZE_X = 440;
 	private final int SIZE_Y = 180;
 	private JPanel contentPane;
-	private JTextField txtInField;
 	private OutputPanel out = new OutputPanel(IN_OUT_FONT,HIDE_STRING);
+	private InputPanel in = new InputPanel(IN_OUT_FONT);
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -43,17 +43,8 @@ public class GuessWord extends JFrame{
 				
 		
 		contentPane.add(out,new GridBagSettings(0,0));
+		contentPane.add(in, new GridBagSettings(0,1));
 		
-		
-		JPanel inPanel = new JPanel();
-		contentPane.add(inPanel, new GridBagSettings(0,1));
-		inPanel.setLayout(new GridLayout(1, 0, 0, 0));
-		
-		txtInField = new JTextField();
-		txtInField.setHorizontalAlignment(SwingConstants.LEADING);
-		txtInField.setFont(IN_OUT_FONT);
-		inPanel.add(txtInField);
-		txtInField.setColumns(1);
 		
 		JPanel btnPanel = new JPanel();
 		contentPane.add(btnPanel, new GridBagSettings(1,0,3));
