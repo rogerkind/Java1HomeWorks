@@ -64,7 +64,7 @@ public class GuessWord extends JFrame{
 		btnPanel.add(btnGuess);
 		btnGuess.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                out.setLabels("init");
+                out.setLabels(in.getValue());
             }
         });
 		
