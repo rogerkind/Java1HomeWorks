@@ -5,15 +5,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+@SuppressWarnings("serial")
 public class OutputPanel extends JPanel{
 	private JLabel[] labels = new JLabel[10];
-	private Font font;
 	private String hideString;
 	
 	OutputPanel(Font font,String hidestring){
 		setLayout(new GridLayout(1, 0, 0, 0));
-		this.font = font;
-		this.hideString = hidestring;
+				this.hideString = hidestring;
 		
 		for(int i=0;i<labels.length;i++) {
 			labels[i]=new JLabel();
