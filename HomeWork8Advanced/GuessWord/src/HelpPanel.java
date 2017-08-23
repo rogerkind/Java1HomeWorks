@@ -12,5 +12,8 @@ public class HelpPanel extends JPanel{
 		hlpLabel.setHorizontalAlignment(SwingConstants.LEADING);
 		add(hlpLabel);	
 	}
-
+	
+	public void setMessage(String message) {
+		hlpLabel.setText(message);
+	}
 }
