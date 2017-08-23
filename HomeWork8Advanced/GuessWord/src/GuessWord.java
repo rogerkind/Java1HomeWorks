@@ -4,12 +4,12 @@ import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import java.awt.GridBagLayout;
-import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.*;
 
 @SuppressWarnings("serial")
 public class GuessWord extends JFrame{
+	private final String TITLE = "Guess Word Game";
 	private final Font IN_OUT_FONT = new Font("Arial", Font.BOLD, 35);
 	private final String HIDE_STRING = "#";
 	private final int SIZE_X = 440;
@@ -17,18 +17,21 @@ public class GuessWord extends JFrame{
 	private JPanel contentPane;
 	private OutputPanel out = new OutputPanel(IN_OUT_FONT,HIDE_STRING);
 	private InputPanel in = new InputPanel(IN_OUT_FONT);
+	private HelpPanel status = new HelpPanel();
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		new GuessWord();
 	}
 	public GuessWord() {
+		setTitle(TITLE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(SIZE_X,SIZE_Y);
 		setLocationRelativeTo(null); // to the center
         setResizable(false);
         
-		contentPane = new JPanel(); contentPane.setBorder(new EmptyBorder(0, 0, 0, 0));
+		contentPane = new JPanel(); 
+		contentPane.setBorder(new EmptyBorder(0, 0, 0, 0));
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
 		gbl_contentPane.columnWidths = new int[]{244, 100};
@@ -41,7 +44,7 @@ public class GuessWord extends JFrame{
 		
 		contentPane.add(out,new GridBagSettings(0,0));
 		contentPane.add(in, new GridBagSettings(0,1));
-		
+		contentPane.add(status, new GridBagSettings(0,2));
 		
 		JPanel btnPanel = new JPanel();
 		contentPane.add(btnPanel, new GridBagSettings(1,0,3));
@@ -53,6 +56,7 @@ public class GuessWord extends JFrame{
 		btnNewGame.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 out.reset();
+                status.setMessage("New Game");
             }
         });
 		
@@ -62,6 +66,7 @@ public class GuessWord extends JFrame{
 		btnGuess.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 out.setLabels(in.getValue());
+                status.setMessage("Guess button pressed");
             }
         });
 		
@@ -74,11 +79,9 @@ public class GuessWord extends JFrame{
             }
         });
 		
-		JPanel helpPanel = new JPanel();
-		contentPane.add(helpPanel, new GridBagSettings(0,2));
-		helpPanel.setLayout(new GridLayout(1, 0, 0, 0));
-		JLabel hlpLabel = new JLabel("Some Text");
-		helpPanel.add(hlpLabel);
+		
+		
+		
 		
 		
 		setVisible(true);

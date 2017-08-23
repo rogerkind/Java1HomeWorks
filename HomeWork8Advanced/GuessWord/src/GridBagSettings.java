@@ -1,6 +1,7 @@
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 
+@SuppressWarnings("serial")
 public class GridBagSettings extends GridBagConstraints {
 
 	GridBagSettings(int gridX,int gridY){
