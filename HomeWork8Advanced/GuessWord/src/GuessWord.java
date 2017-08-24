@@ -24,12 +24,14 @@ public class GuessWord {
 	
 	public GuessWord() {
 		settedword= WORDS[(int)(Math.random() * WORDS.length)];
+		
 		//New game pressed
 		gui.getControls().getBtnNewGame().addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	settedword= WORDS[(int)(Math.random() * WORDS.length)];
             	gui.getOut().reset();
             	gui.getIn().reset();
+            	gui.getIn().grabFocus();
                 gui.getStatus().setMessage(NEW_GAME_MSG);
                
             }
@@ -63,6 +65,8 @@ public class GuessWord {
                 System.exit(0);
             }
         });
+		
+		gui.getIn().grabFocus();
 	}
 	
 	
