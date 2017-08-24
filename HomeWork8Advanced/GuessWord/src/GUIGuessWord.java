@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -23,8 +26,7 @@ public class GUIGuessWord extends JFrame {
 		setSize(SIZE_X,SIZE_Y);
 		setLocationRelativeTo(null); // to the center
         setResizable(false);
-        
-		 
+  	 
 		contentPane.setBorder(new EmptyBorder(0, 0, 0, 0));
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
@@ -33,8 +35,6 @@ public class GUIGuessWord extends JFrame {
 		gbl_contentPane.columnWeights = new double[]{1.0, 1.0};
 		gbl_contentPane.rowWeights = new double[]{1.0, 1.0, 1.0};
 		contentPane.setLayout(gbl_contentPane);
-		
-				
 		
 		contentPane.add(out,new GridBagSettings(0,0));
 		contentPane.add(in, new GridBagSettings(0,1));

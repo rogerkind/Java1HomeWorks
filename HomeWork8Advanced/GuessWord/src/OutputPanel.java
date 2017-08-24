@@ -38,7 +38,9 @@ public class OutputPanel extends JPanel{
 		}
 	}
 	
-	
+	public JLabel[] getLabels() {
+		return labels;
+	}
 	
 	
 }
