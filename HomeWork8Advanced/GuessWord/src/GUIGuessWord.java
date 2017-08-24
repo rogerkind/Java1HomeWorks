@@ -9,7 +9,7 @@ import java.awt.Font;
 
 @SuppressWarnings("serial")
 public class GUIGuessWord extends JFrame {
-	private final String TITLE = "Guess Word Game";
+	private final String TITLE = "Guess Word Game(gardentruck)";
 	private final Font IN_OUT_FONT = new Font("Arial", Font.BOLD, 35);
 	private final String HIDE_STRING = "#";
 	private final int SIZE_X = 440;
